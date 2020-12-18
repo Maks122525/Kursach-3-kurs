@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="696.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="696.0" fitWidth="1216.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/sinii-fon.orig.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="7.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Таблица">
+            <items>
+              <MenuItem fx:id="fakul" mnemonicParsing="false" onAction="#click_fakul" text="Факультет" />
+                  <MenuItem fx:id="srez" mnemonicParsing="false" onAction="#click_spez" text="Специальности" />
+                  <MenuItem fx:id="grup" mnemonicParsing="false" onAction="#click_grup" text="Группа" />
+                  <MenuItem fx:id="student" mnemonicParsing="false" onAction="#click_student" text="Студент" />
+                  <MenuItem fx:id="prepod" mnemonicParsing="false" onAction="#click_prepod" text="Преподаватели" />
+                  <MenuItem fx:id="otcen" mnemonicParsing="false" onAction="#click_octen" text="Оценки" />
+                  <MenuItem fx:id="dolg" mnemonicParsing="false" onAction="#click_dolg" text="Должности" />
+                  <MenuItem fx:id="disz" mnemonicParsing="false" onAction="#click_disz" text="Дисциплины" />
+                  <MenuItem fx:id="rab" mnemonicParsing="false" onAction="#click_rab" text="Вид работы" />
+            </items>
+          </Menu>
+          <Menu fx:id="Rast" mnemonicParsing="false" onAction="#click_rast" text="Рейтинг">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#click_reit" text="Рассчитать рейтинг" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Пользватель">
+            <items>
+              <MenuItem fx:id="polz" mnemonicParsing="false" onAction="#click_polz" text="Добавить пользвателя" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tabl" layoutX="33.0" layoutY="60.0" onMouseClicked="#show_f" prefHeight="283.0" prefWidth="856.0" visible="false">
+        <columns>
+          <TableColumn fx:id="id_t" prefWidth="75.0" text="Код факультета" />
+          <TableColumn fx:id="name_t" prefWidth="75.0" text="Наименование факультета" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="combo_1" editable="true" layoutX="617.0" layoutY="486.0" onAction="#click_comb" prefWidth="150.0" visible="false" />
+      <Label fx:id="lab_f_k" layoutX="30.0" layoutY="361.0" text="Код факультета" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab_f_n" layoutX="30.0" layoutY="404.0" text="Наименование факультета" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kod_f_tekst" layoutX="230.0" layoutY="358.0" prefHeight="26.0" prefWidth="357.0" visible="false" />
+      <TextField fx:id="name_f_tekst" layoutX="230.0" layoutY="401.0" prefHeight="26.0" prefWidth="358.0" visible="false" />
+      <Button fx:id="insert_f" layoutX="14.0" layoutY="637.0" mnemonicParsing="false" onAction="#click_insert_f" text="Добавить" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updete_f" layoutX="130.0" layoutY="637.0" mnemonicParsing="false" onAction="#click_update_f" text="Изменить" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete_f" layoutX="262.0" layoutY="637.0" mnemonicParsing="false" onAction="#click_delete_f" text="Удалить" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="label_3" layoutX="25.0" layoutY="446.0" text="Label" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_4" layoutX="25.0" layoutY="489.0" text="Label" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_5" layoutX="25.0" layoutY="527.0" text="Label" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_6" layoutX="25.0" layoutY="570.0" text="Label" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="text_3" layoutX="231.0" layoutY="441.0" prefHeight="20.0" prefWidth="358.0" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_4" layoutX="231.0" layoutY="484.0" prefHeight="30.0" prefWidth="358.0" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_5" layoutX="231.0" layoutY="522.0" prefHeight="30.0" prefWidth="358.0" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_6" layoutX="231.0" layoutY="565.0" prefHeight="30.0" prefWidth="358.0" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tabl_spec" layoutX="33.0" layoutY="66.0" onMouseClicked="#click_tabl_spec" prefHeight="243.0" prefWidth="856.0" visible="false">
+        <columns>
+          <TableColumn fx:id="kod_spec" prefWidth="75.0" text="Код специальности" />
+          <TableColumn fx:id="nam_spec" prefWidth="84.79998779296875" text="Нименование специальности" />
+            <TableColumn fx:id="colum_shifr" prefWidth="87.19999694824219" text="Шифр специальности" />
+            <TableColumn fx:id="colum_fak" prefWidth="141.60003662109375" text="Наименование факультета" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabl_dolg" layoutX="29.0" layoutY="47.0" onMouseClicked="#click_tabl_dolg" prefHeight="262.0" prefWidth="864.0" visible="false">
+        <columns>
+          <TableColumn fx:id="kod_dolg" prefWidth="75.0" text="Код должности" />
+          <TableColumn fx:id="name_dolg" prefWidth="75.0" text="Наименование должности" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabl_vid" layoutX="16.0" layoutY="47.0" onMouseClicked="#click_tabl_vid" prefHeight="262.0" prefWidth="864.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tabl_vid_id" prefWidth="75.0" text="Код работы" />
+          <TableColumn fx:id="tabl_vid_name" prefWidth="75.0" text="Название работы" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabl_disz" layoutX="29.0" layoutY="47.0" onMouseClicked="#clicl_tabl_disz" prefHeight="262.0" prefWidth="856.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tabl_disz_kod" prefWidth="75.0" text="Код дисциплины" />
+          <TableColumn fx:id="tabl_disz_name" prefWidth="75.0" text="Наименование дисциплины" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabl_grup" layoutX="29.0" layoutY="47.0" onMouseClicked="#click_tabl_grup" prefHeight="262.0" prefWidth="856.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tabl_grup_kod" prefWidth="75.0" text="Код группы" />
+          <TableColumn fx:id="tabl_grup_name_g" prefWidth="75.0" text="Наименование группы" />
+            <TableColumn fx:id="tabl_grup_name_s" prefWidth="75.0" text="Наименование специальности" />
+            <TableColumn fx:id="tabl_grup_name_f" prefWidth="75.0" text="Наименование факультета" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="combo_2" editable="true" layoutX="617.0" layoutY="443.0" onAction="#click_comb2" prefWidth="150.0" visible="false" />
+      <TableView fx:id="tabl_prep" layoutX="30.0" layoutY="47.0" onMouseClicked="#click_tabl_prep" prefHeight="290.0" prefWidth="856.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tabl_prep_kod" prefWidth="75.0" text="Код преподавателя" />
+          <TableColumn fx:id="tabl_prep_fio" prefWidth="75.0" text="ФИО преподавателя" />
+            <TableColumn fx:id="tabl_prep_dolg" prefWidth="75.0" text="Наименование должности" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabl_stud" layoutX="41.0" layoutY="47.0" onMouseClicked="#click_tabl_stud" prefHeight="262.0" prefWidth="846.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tabl_stud_kod" prefWidth="75.0" text="Код студента" />
+          <TableColumn fx:id="tabl_stud_fio" prefWidth="75.0" text="ФИО студента" />
+            <TableColumn fx:id="tabl_stud_grup" prefWidth="75.0" text="Группа" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabl_otcen" layoutX="41.0" layoutY="47.0" onMouseClicked="#click_tabl_otcen" prefHeight="271.0" prefWidth="846.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tabl_otcen_kod" prefWidth="75.0" text="Код оценки" />
+          <TableColumn fx:id="tabl_otcen_fios" prefWidth="75.0" text="ФИО студента" />
+            <TableColumn fx:id="tabl_otcen_name_r" prefWidth="75.0" text="Наименование работы" />
+            <TableColumn fx:id="tabl_otcen_otcen" prefWidth="75.0" text="Оценка" />
+            <TableColumn fx:id="tabl_otcen_disz" prefWidth="75.0" text="Дисциплина" />
+            <TableColumn fx:id="tabl_otcen_fiop" prefWidth="75.0" text="ФИО преподавателя" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="combo_3" editable="true" layoutX="617.0" layoutY="524.0" onAction="#click_comb3" prefWidth="150.0" visible="false" />
+      <ComboBox fx:id="combo4" editable="true" layoutX="617.0" layoutY="568.0" onAction="#click_comb4" prefWidth="150.0" visible="false" />
+      <TableView fx:id="tabl_reit" layoutX="41.0" layoutY="47.0" prefHeight="290.0" prefWidth="834.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tabl_reit_fio" prefWidth="75.0" text="ФИО студента" />
+          <TableColumn fx:id="tabl_reit_gr" prefWidth="75.0" text="Группа" />
+            <TableColumn fx:id="tabl_reit_dis" prefWidth="75.0" text="Дисциплина" />
+            <TableColumn fx:id="tabl_reit_lab" prefWidth="75.0" text="Средний балл за лабораторные" />
+            <TableColumn fx:id="tabl_reit_usr" prefWidth="75.0" text="Средний балл за УСР" />
+            <TableColumn fx:id="tabl_reit_atest" prefWidth="75.0" text="Аттестация" />
+            <TableColumn fx:id="tabl_reit_itog" prefWidth="75.0" text="Рейтинг" />
+        </columns>
+      </TableView>
+      <Label fx:id="label_7" layoutX="44.0" layoutY="373.0" text="Факультет" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combo_5" editable="true" layoutX="25.0" layoutY="401.0" onAction="#click_comb5" prefWidth="150.0" visible="false" />
+      <Label fx:id="label_8" layoutX="213.0" layoutY="375.0" text="Специальность" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combo_6" editable="true" layoutX="203.0" layoutY="401.0" onAction="#click_comb6" prefWidth="150.0" visible="false" />
+      <Label fx:id="label_9" layoutX="404.0" layoutY="375.0" text="Группа" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combo_7" editable="true" layoutX="397.0" layoutY="401.0" onAction="#click_comb7" prefWidth="150.0" visible="false" />
+      <Label fx:id="label_10" layoutX="603.0" layoutY="377.0" text="Дисциплина" textFill="#f6ff00" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combo_8" editable="true" layoutX="595.0" layoutY="402.0" onAction="#click_comb8" prefWidth="150.0" visible="false" />
+      <Button fx:id="but_reit" layoutX="29.0" layoutY="443.0" mnemonicParsing="false" onAction="#click_but_reit" text="Рассчитать" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="log_dob" layoutX="58.0" layoutY="66.0" promptText="Введите логин" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="pass_1_dob" layoutX="56.0" layoutY="117.0" promptText="Введите пароль" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="pass_2_dob" layoutX="55.0" layoutY="166.0" promptText="Подтвердите пароль" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="but_dob" layoutX="86.0" layoutY="227.0" mnemonicParsing="false" onAction="#click_but_dob" prefHeight="30.0" prefWidth="99.0" text="Добавить" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
